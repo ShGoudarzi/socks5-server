@@ -1,9 +1,11 @@
-version: '3'
+version: "3"
 services:
 
-  socks5:
-    restart: always
-    image: shgoudarzi/socks5-server
-    env_file: .env
+  socks5-server:
+    build: .
+    image: socks5-server:latest
     ports:
       - "8080:8080"
+    env_file: .env
+    restart: always
+    container_name: socks5-server
