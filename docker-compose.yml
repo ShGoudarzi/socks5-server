@@ -6,4 +6,4 @@ services:
     image: serjs/go-socks5-proxy
     env_file: .env
     ports:
-      - "1080:1080"
+      - "8080:8080"
